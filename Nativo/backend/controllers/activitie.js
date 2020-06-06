@@ -14,7 +14,7 @@ var controller = {
             message: "Test funtion(test)"
         });
     },
-
+    //Create new activities
     saveActivities: function (req, res) {
         var activitie = new model_activite();
 
@@ -28,11 +28,22 @@ var controller = {
         activitie.image = null;
 
         activitie.save((err, activitieStorage) => {
-            if (err) return res.status(500).send({ message: 'Request error' });
+            if (err) return res.status(500).send({ message: 'Request error doct' });
             if (!activitieStorage) return res.status(404).send({ message: 'I couldnt save' });
             return res.status(200).send({ activitie: activitieStorage });
         });
+    },
+    //Get id, activities depend of id
+    getActivities: function (req, res) {
+        var activitieId = req.params.id;
+        if (activitieId == null) return res.status(404).send({ message: 'The activitie no exist' });
+        model_activite.findById(activitieId, (err, activitie) => {
+            if (err) return res.status(500).send({ message: 'Request error data' })
+            if (err) return res.status(404).send({ message: 'The activitie no exist' });
+            return res.status(200).send({ activitie });
+        });
     }
+    
 };
 
 //Retunr model exports
