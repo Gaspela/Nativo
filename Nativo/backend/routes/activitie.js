@@ -9,5 +9,6 @@ router.get('/home', ActivitieController.home);
 router.post('/test', ActivitieController.test);
 router.post('/addativitie', ActivitieController.saveActivities);
 router.get('/activitie/:id?', ActivitieController.getActivities);
+router.get('/listactivities', ActivitieController.getListActivities);
 
 module.exports = router;

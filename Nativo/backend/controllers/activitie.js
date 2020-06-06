@@ -42,8 +42,16 @@ var controller = {
             if (err) return res.status(404).send({ message: 'The activitie no exist' });
             return res.status(200).send({ activitie });
         });
+    },
+
+    getListActivities: function(req, res) {
+        model_activite.find({}).sort('+year').exec((err, activities)=> {
+            if (err) return res.status(500).send({message: 'Request error data'});
+            if (!activities) return res.status(404).send({message: 'ACtivities not exist'});
+            return res.status(200).send({activities});
+        })
     }
-    
+
 };
 
 //Retunr model exports
