@@ -3,17 +3,6 @@
 var model_activite = require('../models/activitie');
 var controller = {
 
-    home: function (req, res) {
-        return res.status(200).send({
-            message: "Soy home"
-        });
-    },
-
-    test: function (req, res) {
-        return res.status(200).send({
-            message: "Test funtion(test)"
-        });
-    },
     //Create new activities
     saveActivities: function (req, res) {
         var activitie = new model_activite();
@@ -47,7 +36,7 @@ var controller = {
     getListActivities: function(req, res) {
         model_activite.find({}).sort('+year').exec((err, activities)=> {
             if (err) return res.status(500).send({message: 'Request error data'});
-            if (!activities) return res.status(404).send({message: 'ACtivities not exist'});
+            if (!activities) return res.status(404).send({message: 'Activities not exist'});
             return res.status(200).send({activities});
         })
     }
