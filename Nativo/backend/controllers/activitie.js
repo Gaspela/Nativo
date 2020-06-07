@@ -46,11 +46,19 @@ var controller = {
         var update = req.body;
         model_activite.findByIdAndUpdate(activitieId, update, { new: true }, (err, activitieUpdate) => {
             if (err) return res.status(500).send({ message: "Error update" });
-            if (!activitieUpdate) return res.status(404).send({ message: "Activities not exist" })
+            if (!activitieUpdate) return res.status(404).send({ message: "Activities not exist" });
             return res.status(200).send({ activitie: activitieUpdate });
         });
+    },
+    //Delete activities for id (Use find.remove)
+    deleteActivities: function (req, res) {
+        var activitieId = req.params.id;
+        model_activite.findByIdAndRemove(activitieId, (err, activitieDelete) => {
+            if (err) return res.status(500).send({ message: 'Activity not removed' });
+            if (!activitieDelete) return res.status(404).send({ message: 'Not possible to delete this activity' });
+            return res.status(200).send({ activitie: activitieDelete });
+        });
     }
-
 };
 
 //Retunr model exports
