@@ -9,7 +9,7 @@ var ActivitiesSchema = Schema({
     category: String,
     year: Number,
     type: String,
-    Image: String
+    image: String
 });
 
 module.exports = mongoose.model('activitie', ActivitiesSchema);

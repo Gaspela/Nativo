@@ -58,6 +58,24 @@ var controller = {
             if (!activitieDelete) return res.status(404).send({ message: 'Not possible to delete this activity' });
             return res.status(200).send({ activitie: activitieDelete });
         });
+    },
+    //Upload images on activities
+    uploadImage: function (req, res) {
+        var activitieId = req.params.id;
+        var fileName = 'Img not upload';
+        if (req.files) {
+            var filePath = req.files.image.path;
+            var fileSplit = filePath.split('\\');
+            var fileName = fileSplit[1];
+            model_activite.findByIdAndUpdate(activitieId, { image: fileName }, {new: true}, (err, updateActivities) => {
+                if (err) return res.status(500).send({ message: 'Image not upload' });
+                if (!updateActivities) return res.status(404).send({ message: 'Not possibke to upload image' });
+                return res.status(200).send({ activitie: updateActivities });
+            })
+
+        } else {
+            return res.status(200).send({ message: fileName })
+        }
     }
 };
 
