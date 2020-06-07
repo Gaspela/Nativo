@@ -25,20 +25,30 @@ var controller = {
     //Get id, activities depend of id
     getActivities: function (req, res) {
         var activitieId = req.params.id;
-        if (activitieId == null) return res.status(404).send({ message: 'The activitie no exist' });
+        if (activitieId == null) return res.status(404).send({ message: 'Activities not exist' });
         model_activite.findById(activitieId, (err, activitie) => {
             if (err) return res.status(500).send({ message: 'Request error data' })
-            if (err) return res.status(404).send({ message: 'The activitie no exist' });
+            if (err) return res.status(404).send({ message: 'Activities not exist' });
             return res.status(200).send({ activitie });
         });
     },
-
-    getListActivities: function(req, res) {
-        model_activite.find({}).sort('+year').exec((err, activities)=> {
-            if (err) return res.status(500).send({message: 'Request error data'});
-            if (!activities) return res.status(404).send({message: 'Activities not exist'});
-            return res.status(200).send({activities});
+    //Get list activities
+    getListActivities: function (req, res) {
+        model_activite.find({}).sort('+year').exec((err, activities) => {
+            if (err) return res.status(500).send({ message: 'Request error data' });
+            if (!activities) return res.status(404).send({ message: 'Activities not exist' });
+            return res.status(200).send({ activities });
         })
+    },
+    //Put update activities for id
+    updateActivities: function (req, res) {
+        var activitieId = req.params.id;
+        var update = req.body;
+        model_activite.findByIdAndUpdate(activitieId, update, { new: true }, (err, activitieUpdate) => {
+            if (err) return res.status(500).send({ message: "Error update" });
+            if (!activitieUpdate) return res.status(404).send({ message: "Activities not exist" })
+            return res.status(200).send({ activitie: activitieUpdate });
+        });
     }
 
 };
