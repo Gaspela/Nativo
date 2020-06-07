@@ -7,9 +7,9 @@ var bodyParser = require('body-parser');
 var app = express();
 
 // Files.js Routes
-var activitie_routes = require('./routes/activitie');
+var activitie_routes = require('./routes/activities');
 //Middlewares layer before controller routes funtions
-app.use(bodyParser.urlencoded({extended:false}));
+app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 //CORS

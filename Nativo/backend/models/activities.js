@@ -12,4 +12,4 @@ var ActivitiesSchema = Schema({
     image: String
 });
 
-module.exports = mongoose.model('activitie', ActivitiesSchema);
+module.exports = mongoose.model('activities', ActivitiesSchema);

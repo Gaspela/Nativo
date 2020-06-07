@@ -12,7 +12,7 @@ mongoose.connect('mongodb://localhost:27017/nativo_db',
     {
         useNewUrlParser: true,
         useUnifiedTopology: true
-    }).then(()=>{
+    }).then(() => {
         console.log(`connection to database established`)
 
         //Create server
@@ -20,4 +20,4 @@ mongoose.connect('mongodb://localhost:27017/nativo_db',
             console.log("Server connected by URL: Localhost: 3700")
         });
 
-    }).catch(err=> console.log(err));
+    }).catch(err => console.log(err));
