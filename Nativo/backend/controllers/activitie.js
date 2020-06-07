@@ -1,6 +1,7 @@
 'use strict'
 //Funtions or methods
 var model_activite = require('../models/activitie');
+var filesis = require('fs');
 var controller = {
 
     //Create new activities
@@ -67,14 +68,20 @@ var controller = {
             var filePath = req.files.image.path;
             var fileSplit = filePath.split('\\');
             var fileName = fileSplit[1];
-            model_activite.findByIdAndUpdate(activitieId, { image: fileName }, {new: true}, (err, updateActivities) => {
-                if (err) return res.status(500).send({ message: 'Image not upload' });
-                if (!updateActivities) return res.status(404).send({ message: 'Not possibke to upload image' });
-                return res.status(200).send({ activitie: updateActivities });
-            })
-
-        } else {
-            return res.status(200).send({ message: fileName })
+            var extSplit = fileName.split('\.');
+            var fileExt = extSplit[1];
+            //Condition type image
+            if (fileExt == 'png' || fileExt == 'jpg' || fileExt == 'jpeg' || fileExt == 'gif') {
+                model_activite.findByIdAndUpdate(activitieId, { image: fileName }, { new: true }, (err, updateActivities) => {
+                    if (err) return res.status(500).send({ message: 'Image not upload' });
+                    if (!updateActivities) return res.status(404).send({ message: 'Not possibke to upload image' });
+                    return res.status(200).send({ activitie: updateActivities });
+                });
+            } else {
+                filesis.unlink(filePath, (err) => {
+                    return res.status(404).send({ message: "Not valid extension" })
+                });
+            }
         }
     }
 };
