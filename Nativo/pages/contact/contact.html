@@ -1,47 +1,24 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
   <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Nativo | Contact</title>
-  <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- Plugins CSS -->
-  <link rel="stylesheet" href="../../plugins/bootstrap-4.3.1/css/bootstrap.min.css">
-  <link rel="stylesheet" href="../../plugins/fancybox-master/jquery.fancybox.min.css">
-  <link rel="stylesheet" href="../../plugins/aos-animation/aos.css">
-  <!-- Fonts -->
-  <link rel="stylesheet" href="../../dist/fonts/ep-icon-fonts/css/style.css">
-  <link rel="stylesheet" href="../../dist/fonts/fontawesome-5/css/all.min.css">
-  <link rel="stylesheet" href="../../dist/fonts/typography-font/typo-fonts.css">
-  <!-- Custom Stylesheet -->
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-  <link rel="stylesheet" href="../../dist/css/style.css">
-  <!-- Font Awesome -->
+  <title>Nativo | Contact</title>
+
+  <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="../../plugins/fontawesome-free/css/all.min.css">
-  <!-- Ionicons -->
-  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
-  <!-- Tempusdominus Bbootstrap 4 -->
-  <link rel="stylesheet" href="../../plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
-  <!-- iCheck -->
-  <link rel="stylesheet" href="../../plugins/icheck-bootstrap/icheck-bootstrap.min.css">
-  <!-- JQVMap -->
-  <link rel="stylesheet" href="../../plugins/jqvmap/jqvmap.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="../../dist/css/adminlte.min.css">
-  <!-- overlayScrollbars -->
-  <link rel="stylesheet" href="../../plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
-  <!-- Daterange picker -->
-  <link rel="stylesheet" href="../../plugins/daterangepicker/daterangepicker.css">
-  <!-- summernote -->
-  <link rel="stylesheet" href="../../plugins/summernote/summernote-bs4.css">
   <!-- Google Font: Source Sans Pro -->
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
 </head>
 
-<body class="hold-transition sidebar-mini layout-fixed">
+<body class="hold-transition sidebar-mini">
   <div class="wrapper">
+
     <!-- Navbar -->
     <nav class="main-header navbar navbar-expand navbar-white navbar-light">
       <!-- Left navbar links -->
@@ -53,7 +30,7 @@
           <a href="../../index.html" class="nav-link">Home</a>
         </li>
         <li class="nav-item d-none d-sm-inline-block">
-          <a href="../../pages/contact/contact.html" class="nav-link">Contact</a>
+          <a href="../contact/contact.html" class="nav-link">Contact</a>
         </li>
       </ul>
     </nav>
@@ -63,9 +40,9 @@
     <aside class="main-sidebar sidebar-dark-primary elevation-4">
       <!-- Brand Logo -->
       <a href="../../index.html" class="brand-link">
-        <img src="../../dist/img/logo_nativo.png" alt="Nativo Logo" class="brand-image img-circle elevation-3"
+        <img src="../../dist/img/NativoLogo.png" alt="Nativo Logo" class="brand-image img-circle elevation-3"
           style="opacity: .8">
-        <span class="brand-text font-weight-light">Nativo</span> <!-- LOGO -->
+        <span class="brand-text font-weight-light">Nativo</span>
       </a>
 
       <!-- Sidebar -->
@@ -73,21 +50,18 @@
         <!-- Sidebar user panel (optional) -->
         <div class="user-panel mt-3 pb-3 mb-3 d-flex">
           <div class="image">
-            <img src="../../dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+            <img src="../../dist/img/user-mauricio.jpeg" class="img-circle elevation-2" alt="User Image">
           </div>
           <div class="info">
-            <a href="#" class="d-block">Samir Millán</a>
+            <a href="#" class="d-block">Mauricio Drada</a>
           </div>
         </div>
 
         <!-- Sidebar Menu -->
         <nav class="mt-2">
           <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-            <!-- Add icons to the links using the .nav-icon class
-               with font-awesome or any other icon font library -->
-            <!-- menu-open -->
-            <li class="nav-header">MAIN NAVIGATION</li>
-            <li class="nav-item has-treeview ">
+            <!-- Add icons to links using .nav-icon class with font-awesome or other icon font library -->
+            <li class="nav-item has-treeview menu-open">
               <a href="#" class="nav-link">
                 <i class="nav-icon fas fa-th"></i>
                 <p>
@@ -98,37 +72,26 @@
               </a>
               <ul class="nav nav-treeview">
                 <li class="nav-item">
-                  <a href="../../pages/activities/daily.html" class="nav-link">
+                  <a href="../activities/daily.html" class="nav-link">
                     <i class="far fa-circle nav-icon"></i>
-                    <p>Daily activities</p>
+                    <p>Daily Activities</p>
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a href="../../pages/activities/weekly.html" class="nav-link">
+                  <a href="../activities/weekly.html" class="nav-link">
                     <i class="far fa-circle nav-icon"></i>
-                    <p>Weekly activities</p>
+                    <p>Weekly Activities</p>
                   </a>
                 </li>
-
               </ul>
             </li>
-            <li class="nav-item has-treeview">
-              <a href="#" class="nav-link">
-                <i class="nav-icon fas fa-table"></i>
+            <li class="nav-item">
+              <a href="../results/activity_1.html" class="nav-link">
+                <i class="nav-icon fas fa-th"></i>
                 <p>
                   Results
-                  <i class="fas fa-angle-left right"></i>
                 </p>
               </a>
-              <ul class="nav nav-treeview">
-                <li class="nav-item">
-                  <a href="../../pages/results/activity_1.html" class="nav-link">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>Activity 1</p>
-                  </a>
-                </li>
-              </ul>
-            </li>
             </li>
           </ul>
         </nav>
@@ -136,7 +99,7 @@
       </div>
       <!-- /.sidebar -->
     </aside>
-    <!-- **************************************************************************************************************************** -->
+
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
       <!-- Content Header (Page header) -->
@@ -157,145 +120,106 @@
       <!-- /.content-header -->
 
       <!-- Main content -->
-      <section class="content">
-        <!-- Contact Section -->
-        <div class="container">
-          <div class="card-group berlin-card-group">
-            <div class="card contact-card-1">
-              <div class="card-body">
-                <a href="https://github.com/diego0096" target="_blank">
-                  <p>GitHub</p>
-                </a>
-                <a href="https://www.linkedin.com/in/diego-felipe-quijano-zu%C3%B1iga-997793180/" target="_blank">
-                  <p>LinkedIn</p>
-                </a>
-                <a href="https://twitter.com/DiegoQ0096" target="_blank">
-                  <p>Twitter</p>
-                </a>
-              </div>
-              <div class="card-footer">
-                <div class="client-card">
-                  <div class="image">
-                    <img src="../../dist/img/Diego_Quijano.jpg" alt="">
+      <div class="content">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="card card-primary card card-outline">
+                <div class="card-body">
+                  <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+                    <div class="image">
+                      <img src="../../dist/img/user-mauricio.jpeg" class="img-circle elevation-2" alt="Mauricio Drada Dávila">
+                    </div>
+                    <div class="info">
+                      <a href="#" class="d-block">Mauricio Drada Dávila</a>
+                    </div>
                   </div>
-                  <div class="content">
-                    <h5 class="title">Diego Felipe Quijano Zúñiga</h5>
-                    <span>Backend Engineer </span>
-                  </div>
+                  <p class="card-text">Frontend Developer</p>
+                  <a href="https://github.com/Mauricio-KND" target="_blank" class="card-link">Github</a>
+                  <a href="https://www.linkedin.com/in/mauricio-drada-d%C3%A1vila-02a98a193/" target="_blank"
+                    class="card-link">LinkedIn</a>
+                  <a href="https://twitter.com/drada_mauricio" target="_blank" class="card-link">Twetter</a>
                 </div>
               </div>
+
+              <div class="card card-primary card card-outline">
+                <div class="card-body">
+                  <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+                    <div class="image">
+                      <img src="../../dist/img/user - samir.jpeg" class="img-circle elevation-2" alt="Mauricio Drada Dávila">
+                    </div>
+                    <div class="info">
+                      <a href="#" class="d-block">Samir Millán Orozco</a>
+                    </div>
+                  </div>
+                  <p class="card-text">Frontend/Backend Developer</p>
+                  <a href="https://github.com/Gaspela04" target="_blank" class="card-link">Github</a>
+                  <a href="https://www.linkedin.com/in/samir-millan-48b911109/" target="_blank"
+                    class="card-link">LinkedIn</a>
+                  <a href="https://twitter.com/Gaspela" target="_blank" class="card-link">Twetter</a>
+                </div>
+              </div><!-- /.card -->
             </div>
-            <div class="card contact-card-1">
-              <div class="card-body">
-                <a href="https://github.com/Mauricio-KND" target="_blank">
-                  <p>GitHub</p>
-                </a>
-                <a href="https://www.linkedin.com/in/mauricio-drada-d%C3%A1vila-02a98a193/" target="_blank">
-                  <p>LinkedIn</p>
-                </a>
-                <a href="https://twitter.com/drada_mauricio" target="_blank">
-                  <p>Twitter</p>
-                </a>
-              </div>
-              <div class="card-footer">
-                <div class="client-card">
-                  <div class="image">
-                    <img src="../../dist/img/Mauricio Drada.jpg" alt="">
+            <!-- /.col-md-6 -->
+
+            <div class="col-lg-6">
+              <div class="card card-primary card card-outline">
+                <div class="card-body">
+                  <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+                    <div class="image">
+                      <img src="../../dist/img/user - diego.jpg" class="img-circle elevation-2" alt="Mauricio Drada Dávila">
+                    </div>
+                    <div class="info">
+                      <a href="#" class="d-block">Diego Felipe Quijano Zuñiga</a>
+                    </div>
                   </div>
-                  <div class="content">
-                    <h5 class="title">Mauricio Drada Dávila</h5>
-                    <span>Frontend Engineer</span>
-                  </div>
+                  <p class="card-text">Backend/Devops Developer</p>
+                  <a href="https://github.com/diego0096" target="_blank" class="card-link">Github</a>
+                  <a href="https://www.linkedin.com/in/diego-felipe-quijano-zu%C3%B1iga-997793180/" target="_blank"
+                    class="card-link">LinkedIn</a>
+                  <a href="https://twitter.com/DiegoQ0096" target="_blank" class="card-link">Twetter</a>
                 </div>
               </div>
+              <!-- /.col-md-6 -->
             </div>
-            <div class="card contact-card-1">
-              <div class="card-body">
-                <a href="https://github.com/Gaspela04" target="_blank">
-                  <p>GitHub</p>
-                </a>
-                <a href="https://www.linkedin.com/in/samir-millan-48b911109/" target="_blank">
-                  <p>LinkedIn</p>
-                </a>
-                <a href="https://twitter.com/Gaspela" target="_blank">
-                  <p>Twitter</p>
-                </a>
-              </div>
-              <div class="card-footer">
-                <div class="client-card">
-                  <div class="image">
-                    <img src="../../dist/img/Samir Millán.jpeg" alt="">
-                  </div>
-                  <div class="content">
-                    <h5 class="title">Samir Millán Orozco</h5>
-                    <span>Frontend / Devops Engineer</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-    </div>
-    </section>
-    <!-- /.content-wrapper -->
-    <footer class="main-footer">
-      <strong> &copy; 2020 <a href="../../index.html">Nativo</a></strong>
-      <div class="float-right d-none d-sm-inline-block">
-        <b>Version </b>1.0
+            <!-- /.row -->
+          </div><!-- /.container-fluid -->
+        </div><!-- /.container-fluid -->
       </div>
-    </footer>
+      <!-- /.content -->
+    </div>
+    <!-- /.content-wrapper -->
 
     <!-- Control Sidebar -->
     <aside class="control-sidebar control-sidebar-dark">
       <!-- Control sidebar content goes here -->
+      <div class="p-3">
+        <h5>Title</h5>
+        <p>Sidebar content</p>
+      </div>
     </aside>
     <!-- /.control-sidebar -->
+
+    <!-- Main Footer -->
+    <footer class="main-footer">
+      <!-- To the right -->
+      <div class="float-right d-none d-sm-inline">
+        Version 1.0.0
+      </div>
+      <!-- Default to the left -->
+      <strong> &copy; 2020 <a href="../../index.html">Nativo </a></strong>
+    </footer>
   </div>
   <!-- ./wrapper -->
 
+  <!-- REQUIRED SCRIPTS -->
+
   <!-- jQuery -->
   <script src="../../plugins/jquery/jquery.min.js"></script>
-  <!-- jQuery UI 1.11.4 -->
-  <script src="../../plugins/jquery-ui/jquery-ui.min.js"></script>
-  <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
-  <script>
-    $.widget.bridge('uibutton', $.ui.button)
-  </script>
   <!-- Bootstrap 4 -->
   <script src="../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <!-- ChartJS -->
-  <script src="../../plugins/chart.js/Chart.min.js"></script>
-  <!-- Sparkline -->
-  <script src="../../plugins/sparklines/sparkline.js"></script>
-  <!-- JQVMap -->
-  <script src="../../plugins/jqvmap/jquery.vmap.min.js"></script>
-  <script src="../../plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
-  <!-- jQuery Knob Chart -->
-  <script src="../../plugins/jquery-knob/jquery.knob.min.js"></script>
-  <!-- daterangepicker -->
-  <script src="../../plugins/moment/moment.min.js"></script>
-  <script src="../../plugins/daterangepicker/daterangepicker.js"></script>
-  <!-- Tempusdominus Bootstrap 4 -->
-  <script src="../../plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
-  <!-- Summernote -->
-  <script src="../../plugins/summernote/summernote-bs4.min.js"></script>
-  <!-- overlayScrollbars -->
-  <script src="../../plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
   <!-- AdminLTE App -->
-  <script src="../../dist/js/adminlte.js"></script>
-  <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-  <script src="../../dist/js/pages/dashboard.js"></script>
-  <!-- AdminLTE for demo purposes -->
-  <script src="../../dist/js/demo.js"></script>
-  <!-- Vendor JS-->
-  <script src="../../plugins/jquery/jquery.min.js"></script>
-  <script src="../../plugins/jquery/jquery-migrate.min.js"></script>
-  <script src="../../plugins/bootstrap-4.3.1/js/bootstrap.bundle.js"></script>
-  <!-- Plugins JS -->
-  <script src="../../plugins/fancybox-master/jquery.fancybox.min.js"></script>
-  <script src="../../plugins/aos-animation/aos.js"></script>
-  <!-- Custom JS -->
-  <script src="../../dist/js/active.js"></script>
+  <script src="../../dist/js/adminlte.min.js"></script>
 </body>
 
 </html>
