@@ -17,10 +17,10 @@ var controller = {
         activities.type = params.type;
         activities.image = null;
 
-        activities.save((err, activitieStorage) => {
+        activities.save((err, activitiesStorage) => {
             if (err) return res.status(500).send({ message: 'Request error doct' });
-            if (!activitieStorage) return res.status(404).send({ message: 'I couldnt save' });
-            return res.status(200).send({ activities: activitieStorage });
+            if (!activitiesStorage) return res.status(404).send({ message: 'I couldnt save' });
+            return res.status(200).send({ activities: activitiesStorage });
         });
     },
     //Get id, activities depend of id

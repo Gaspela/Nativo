@@ -8,6 +8,7 @@ var app = express();
 
 // Files.js Routes
 var activities_routes = require('./routes/activities');
+var users_routes = require('./routes/users');
 //Middlewares layer before controller routes funtions
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
@@ -23,5 +24,6 @@ app.use((req, res, next) => {
 
 //Routes */*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/
 app.use('/api', activities_routes)
+app.use('/api', users_routes)
 //Export */*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/
 module.exports = app;
