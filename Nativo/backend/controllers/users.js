@@ -19,7 +19,7 @@ var controller = {
         users.save((err, usersStorage) => {
             if (err) return res.status(500).send({ message: 'Request error doct' });
             if (!usersStorage) return res.status(404).send({ message: 'I couldnt save' });
-            return res.status(200).send({ activities: usersStorage });
+            return res.status(200).send({ users: usersStorage });
         });
     },
     //Get id, users depend of id
@@ -32,7 +32,14 @@ var controller = {
             return res.status(200).send({ users });
         });
     },
-    
+    //Get list activities
+    getListUsers: function (req, res) {
+        model_users.find({}).sort('-age').exec((err, users) => {
+            if (err) return res.status(500).send({ message: 'Request error data' });
+            if (!users) return res.status(404).send({ message: 'Users not list' });
+            return res.status(200).send({ users });
+        })
+    },
 
 };
 
