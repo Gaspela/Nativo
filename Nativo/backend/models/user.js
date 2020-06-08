@@ -4,7 +4,11 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 var UsersSchema = Schema({
-    //Model users
+    lastName: String,
+    name: String,
+    age: Number,
+    company: String,
+    image: String
 });
 
-module.exports = mongoose.model('activitie', UsersSchema);
+module.exports = mongoose.model('users', UsersSchema);

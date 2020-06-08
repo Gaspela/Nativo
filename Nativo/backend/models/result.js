@@ -4,7 +4,10 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 var ResultsSchema = Schema({
-    //Model results
+    average: String,
+    totalOfQuestions: String,
+    solvedQuestions: String,
+    totalAttempts: String
 });
 
-module.exports = mongoose.model('activitie', ResultsSchema);
+module.exports = mongoose.model('results', ResultsSchema);

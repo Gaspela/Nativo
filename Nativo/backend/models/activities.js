@@ -4,6 +4,8 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 var ActivitiesSchema = Schema({
+    title: String,
+    totalOfQuestions: String,
     name: String,
     description: String,
     category: String,
