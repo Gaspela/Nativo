@@ -17,6 +17,7 @@ var controller = {
         activities.type = params.type;
         activities.image = null;
 
+
         activities.save((err, activitiesStorage) => {
             if (err) return res.status(500).send({ message: 'Request error doct' });
             if (!activitiesStorage) return res.status(404).send({ message: 'I couldnt save' });
@@ -74,7 +75,7 @@ var controller = {
             if (fileExt == 'png' || fileExt == 'jpg' || fileExt == 'jpeg' || fileExt == 'gif') {
                 model_activities.findByIdAndUpdate(activitiesId, { image: fileName }, { new: true }, (err, updateActivities) => {
                     if (err) return res.status(500).send({ message: 'Image not upload' });
-                    if (!updateActivities) return res.status(404).send({ message: 'Not possibke to upload image' });
+                    if (!updateActivities) return res.status(404).send({ message: 'Not possible to upload image' });
                     return res.status(200).send({ activities: updateActivities });
                 });
             } else {
