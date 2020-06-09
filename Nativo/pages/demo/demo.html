@@ -9,9 +9,9 @@
   <title>Nativo | Home</title>
 
   <!-- Font Awesome Icons -->
-  <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+  <link rel="stylesheet" href="../../plugins/fontawesome-free/css/all.min.css">
   <!-- Theme style -->
-  <link rel="stylesheet" href="dist/css/adminlte.min.css">
+  <link rel="stylesheet" href="../../dist/css/adminlte.min.css">
   <!-- Google Font: Source Sans Pro -->
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
 </head>
@@ -30,7 +30,7 @@
           <a href="index.html" class="nav-link">Home</a>
         </li>
         <li class="nav-item d-none d-sm-inline-block">
-          <a href="pages/contact/contact.html" class="nav-link">Contact</a>
+          <a href="../../pages/contact/contact.html" class="nav-link">Contact</a>
         </li>
       </ul>
 
@@ -43,16 +43,16 @@
             <span class="badge badge-danger navbar-badge"></span>
           </a>
           <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
-            <a href="pages/demo/demo.html" class="dropdown-item">
+            <a href="demo.html" class="dropdown-item">
               <!-- Message Start -->
               <div class="media">
-                <img src="dist/img/user1-128x128.jpg" alt="User Avatar" class="img-size-50 mr-3 img-circle">
+                <img src="../../dist/img/user-demo.png" alt="User Avatar" class="img-size-50 mr-3 img-circle">
                 <div class="media-body">
                   <h3 class="dropdown-item-title">
                     Nativo.tech
                     <span class="float-right text-sm text-danger"><i class="fas fa-star"></i></span>
                   </h3>
-                  <p class="text-sm">Call me whenever you can...</p>
+                  <p class="text-sm">Demo user creation activities</p>
                   <p class="text-sm text-muted"><i class="fas fa-user mr-1"></i> Demo user</p>
                 </div>
               </div>
@@ -60,8 +60,6 @@
             </a>
           </div>
         </li>
-        <!-- Notifications Dropdown Menu -->
-
       </ul>
     </nav>
     <!-- /.navbar -->
@@ -70,7 +68,7 @@
     <aside class="main-sidebar sidebar-dark-primary elevation-4">
       <!-- Brand Logo -->
       <a href="index.html" class="brand-link">
-        <img src="dist/img/NativoLogo.png" alt="Nativo Logo" class="brand-image img-circle elevation-3"
+        <img src="../../dist/img/NativoLogo.png" alt="Nativo Logo" class="brand-image img-circle elevation-3"
           style="opacity: .8">
         <span class="brand-text font-weight-light">Nativo</span>
       </a>
@@ -80,10 +78,10 @@
         <!-- Sidebar user panel (optional) -->
         <div class="user-panel mt-3 pb-3 mb-3 d-flex">
           <div class="image">
-            <img src="dist/img/user-mauricio.jpeg" class="img-circle elevation-2" alt="User Image">
+            <img src="../../dist/img/user-demo.png" class="img-circle elevation-2" alt="User Image">
           </div>
           <div class="info">
-            <a href="#" class="d-block">Mauricio Drada</a>
+            <a href="#" class="d-block">Demo user</a>
           </div>
         </div>
 
@@ -102,13 +100,13 @@
               </a>
               <ul class="nav nav-treeview">
                 <li class="nav-item">
-                  <a href="pages/activities/daily.html" class="nav-link">
+                  <a href="../../pages/activities/daily.html" class="nav-link">
                     <i class="far fa-circle nav-icon"></i>
                     <p>Daily Activities</p>
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a href="pages/activities/weekly.html" class="nav-link">
+                  <a href="../../pages/activities/weekly.html" class="nav-link">
                     <i class="far fa-circle nav-icon"></i>
                     <p>Weekly Activities</p>
                   </a>
@@ -116,7 +114,7 @@
               </ul>
             </li>
             <li class="nav-item">
-              <a href="pages/results/activity_1.html" class="nav-link">
+              <a href="../../pages/results/activity_1.html" class="nav-link">
                 <i class="nav-icon fas fa-th"></i>
                 <p>
                   Results
@@ -137,11 +135,11 @@
         <div class="container-fluid">
           <div class="row mb-2">
             <div class="col-sm-6">
-              <h1 class="m-0 text-dark">Home</h1>
+              <h1 class="m-0 text-dark">Demo</h1>
             </div><!-- /.col -->
             <div class="col-sm-6">
               <ol class="breadcrumb float-sm-right">
-                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                <li class="breadcrumb-item"><a href="../../index.html">Home</a></li>
               </ol>
             </div><!-- /.col -->
           </div><!-- /.row -->
@@ -166,23 +164,68 @@
                     <li class="nav-item">
                       <a class="nav-link active" id="custom-tabs-one-home-tab" data-toggle="pill"
                         href="#custom-tabs-one-home" role="tab" aria-controls="custom-tabs-one-home"
-                        aria-selected="true">Home</a>
+                        aria-selected="true">Creation activities</a>
                     </li>
                   </ul>
                 </div>
                 <div class="card-body">
                   <div class="tab-content" id="custom-tabs-one-tabContent">
-                    <div class="tab-pane fade show active" id="custom-tabs-one-home" role="tabpanel"
-                      aria-labelledby="custom-tabs-one-home-tab">
-                      Here some news about Nativo!
-                      <div>
-                        Trending Topics!
+                    <div class="row">
+                      <div class="col-md-0">
                       </div>
-                      <div>
-                        Testimonial!
+                      <div class="col-md-10">
+                        <div class="content-wrapper" style="min-height: 1416.81px;">
+
+                          <!-- Main content -->
+                          <section class="content">
+                            <div class="row">
+                              <div class="col-md-12">
+                                <div class="card card-secondary">
+
+                                  <div class="card-body">
+                                    <div class="form-group">
+                                      <label for="inputName">Activity Name</label>
+                                      <input type="text" id="inputName" class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                      <label for="inputDescription">Activity Description</label>
+                                      <textarea id="inputDescription" class="form-control" rows="12"></textarea>
+                                    </div>
+                                    <div class="form-group">
+                                      <label for="inputStatus">Status</label>
+                                      <select class="form-control custom-select">
+                                        <option selected="" disabled="">Select one</option>
+                                        <option>On Hold</option>
+                                        <option>Canceled</option>
+                                        <option>Success</option>
+                                      </select>
+                                    </div>
+                                    <div class="form-group">
+                                      <label for="inputClientCompany">Company</label>
+                                      <input type="text" id="inputClientCompany" class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                      <label for="inputProjectLeader">Project Leader</label>
+                                      <input type="text" id="inputProjectLeader" class="form-control">
+                                    </div>
+                                  </div>
+                                  <!-- /.card-body -->
+                                </div>
+                                <!-- /.card -->
+                              </div>
+
+                            </div>
+                            <div class="row">
+                              <div class="col-12">
+                                <a href="#" class="btn btn-secondary">Cancel</a>
+                                <input type="submit" value="Create new Porject" class="btn btn-success float-right">
+                              </div>
+                            </div>
+                          </section>
+                          <!-- /.content -->
+                        </div>
                       </div>
-                      <div>
-                        Pictures!
+                      <div class="col-md-3">
                       </div>
                     </div>
                   </div>
@@ -222,11 +265,11 @@
   <!-- REQUIRED SCRIPTS -->
 
   <!-- jQuery -->
-  <script src="plugins/jquery/jquery.min.js"></script>
+  <script src="../../plugins/jquery/jquery.min.js"></script>
   <!-- Bootstrap 4 -->
-  <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
   <!-- AdminLTE App -->
-  <script src="dist/js/adminlte.min.js"></script>
+  <script src="../../dist/js/adminlte.min.js"></script>
 </body>
 
 </html>
