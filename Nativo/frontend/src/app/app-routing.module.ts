@@ -8,21 +8,24 @@ import { PagenotfoundComponent } from './pages/pagenotfound/pagenotfound.compone
 import { DailyactivitiesComponent } from './pages/dailyactivities/dailyactivities.component';
 import { WeeklyactivitiesComponent } from './pages/weeklyactivities/weeklyactivities.component';
 import { ResultsComponent } from './pages/results/results.component';
+import { CreateactComponent } from './pages/createact/createact.component';
 
 
 const routes: Routes = [{
   path: '', component: MainComponent,
-  children:[{
+  children: [{
     path: '', component: HomeComponent
-  },{
+  }, {
     path: 'contact', component: ContactComponent
-  },{
+  }, {
     path: 'dailyactivities', component: DailyactivitiesComponent
-  },{
+  }, {
     path: 'weeklyactivities', component: WeeklyactivitiesComponent
-  },{
+  }, {
     path: 'results', component: ResultsComponent
-  },{
+  }, {
+    path: 'createact', component: CreateactComponent
+  }, {
     path: '**', component: PagenotfoundComponent
   }]
 }, {

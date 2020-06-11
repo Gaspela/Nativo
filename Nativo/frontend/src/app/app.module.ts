@@ -13,7 +13,8 @@ import { ContactComponent } from './pages/contact/contact.component';
 import { PagenotfoundComponent } from './pages/pagenotfound/pagenotfound.component';
 import { DailyactivitiesComponent } from './pages/dailyactivities/dailyactivities.component';
 import { WeeklyactivitiesComponent } from './pages/weeklyactivities/weeklyactivities.component';
-import { ResultsComponent } from './pages/results/results.component'
+import { ResultsComponent } from './pages/results/results.component';
+import { CreateactComponent } from './pages/createact/createact.component'
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { ResultsComponent } from './pages/results/results.component'
     PagenotfoundComponent,
     DailyactivitiesComponent,
     WeeklyactivitiesComponent,
-    ResultsComponent
+    ResultsComponent,
+    CreateactComponent
   ],
   imports: [
     BrowserModule,
