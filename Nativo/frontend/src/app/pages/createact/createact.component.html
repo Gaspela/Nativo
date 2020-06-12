@@ -32,7 +32,7 @@
                             <li class="nav-item">
                                 <a class="nav-link active" id="custom-tabs-one-home-tab" data-toggle="pill"
                                     href="#custom-tabs-one-home" role="tab" aria-controls="custom-tabs-one-home"
-                                    aria-selected="true">Creation activities</a>
+                                    aria-selected="true">{{title}}</a>
                             </li>
                         </ul>
                     </div>
@@ -46,56 +46,120 @@
 
                                         <!-- Main content -->
                                         <section class="content">
+
                                             <div class="row">
                                                 <div class="col-md-12">
                                                     <div class="card card-secondary">
+                                                        <!-- Form activities -->
 
                                                         <div class="card-body">
-                                                            <div class="form-group">
-                                                                <label for="inputName">Activity Name</label>
-                                                                <input type="text" id="inputName" class="form-control">
-                                                            </div>
-                                                            <div class="form-group">
-                                                                <label for="inputDescription">Activity
-                                                                    Description</label>
-                                                                <textarea id="inputDescription" class="form-control"
-                                                                    rows="12"></textarea>
-                                                            </div>
-                                                            <div class="form-group">
-                                                                <label for="inputStatus">Status</label>
-                                                                <select class="form-control custom-select">
-                                                                    <option selected="" disabled="">Select one
-                                                                    </option>
-                                                                    <option>On Hold</option>
-                                                                    <option>Canceled</option>
-                                                                    <option>Success</option>
-                                                                </select>
-                                                            </div>
-                                                            <div class="form-group">
-                                                                <label for="inputClientCompany">Company</label>
-                                                                <input type="text" id="inputClientCompany"
-                                                                    class="form-control">
-                                                            </div>
-                                                            <div class="form-group">
-                                                                <label for="inputProjectLeader">Project
-                                                                    Leader</label>
-                                                                <input type="text" id="inputProjectLeader"
-                                                                    class="form-control">
-                                                            </div>
+                                                            <form #activitiesForm="ngForm"
+                                                                (ngSubmit)="onSubmit(activitiesForm)">
+                                                                <div class="form-group">
+                                                                    <label for="inputTitle">Title activity</label>
+                                                                    <input type="text" id="inputTitle" name="title"
+                                                                        #title="ngModel" [(ngModel)]="activities.title"
+                                                                        class="form-control" required>
+                                                                    <span style="color: red;"
+                                                                        *ngIf="title.touched && !title.valid">
+                                                                        The title is mandatory.
+                                                                    </span>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label for="inputDescription">Activity
+                                                                        Description</label>
+                                                                    <textarea id="inputDescription" name="description"
+                                                                        #description="ngModel"
+                                                                        [(ngModel)]="activities.description"
+                                                                        class="form-control" rows="12"
+                                                                        required></textarea>
+                                                                    <span style="color: red;"
+                                                                        *ngIf="description.touched && !description.valid">
+                                                                        The description is mandatory.
+                                                                    </span>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label for="inputName">Correct answer</label>
+                                                                    <input type="text" id="inputRescorrect"
+                                                                        name="rescorrect" #rescorrect="ngModel"
+                                                                        [(ngModel)]="activities.rescorrect"
+                                                                        class="form-control is-valid" required>
+                                                                    <span style="color: red;"
+                                                                        *ngIf="rescorrect.touched && !rescorrect.valid">
+                                                                        A correct answer is necessary.
+                                                                    </span>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label for="inputName">
+                                                                        Incorrect answer</label>
+                                                                    <input type="text" id="inputResincorrect1"
+                                                                        name="resincorrect1" #resincorrect1="ngModel"
+                                                                        [(ngModel)]="activities.resincorrect1"
+                                                                        class="form-control is-invalid" required>
+                                                                    <span style="color: red;"
+                                                                        *ngIf="resincorrect1.touched && !resincorrect1.valid">
+                                                                        An incorrect answer is required.
+                                                                    </span>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label for="inputName">
+                                                                        Incorrect answer</label>
+                                                                    <input type="text" id="inputResincorrect2"
+                                                                        name="resincorrect2" #name="ngModel"
+                                                                        [(ngModel)]="activities.resincorrect2"
+                                                                        class="form-control is-invalid">
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label for="inputName">
+                                                                        Incorrect answer</label>
+                                                                    <input type="text" id="inputResincorrect3"
+                                                                        name="resincorrect3" #name="ngModel"
+                                                                        [(ngModel)]="activities.resincorrect3"
+                                                                        class="form-control is-invalid">
+                                                                </div>
+                                                                <!--                                                                 <div class="form-group">
+                                                                    <label for="inputStatus">Status</label>
+                                                                    <select class="form-control custom-select">
+                                                                        <option selected="" disabled="">Select one
+                                                                        </option>
+                                                                        <option>On Hold</option>
+                                                                        <option>Canceled</option>
+                                                                        <option>Success</option>
+                                                                    </select>
+                                                                </div> -->
+                                                                <div class="form-group">
+                                                                    <label for="inputName">Company</label>
+                                                                    <input type="text" id="inputCompany" name="company"
+                                                                        #name="ngModel" [(ngModel)]="activities.company"
+                                                                        class="form-control">
+                                                                </div>
+                                                                <div class="custom-file">
+                                                                    <input type="file" name="image"
+                                                                        class="custom-file-input" id="customFile">
+                                                                    <label class="custom-file-label"
+                                                                        for="customFile">Choose
+                                                                        file</label>
+                                                                </div>
+                                                                <br>
+                                                                <br>
+                                                                <div class="row">
+                                                                    <div class="col-12">
+                                                                        <a href="#" class="btn btn-secondary">Cancel</a>
+
+                                                                        <input type="submit" value="Create new Porject"
+                                                                            class="btn btn-success float-right" [disabled]="!activitiesForm.form.valid">
+                                                                    </div>
+                                                                </div>
+                                                            </form>
                                                         </div>
                                                         <!-- /.card-body -->
+                                                        <!-- /Form activities -->
                                                     </div>
                                                     <!-- /.card -->
                                                 </div>
+                                            </div>
 
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-12">
-                                                    <a href="#" class="btn btn-secondary">Cancel</a>
-                                                    <input type="submit" value="Create new Porject"
-                                                        class="btn btn-success float-right">
-                                                </div>
-                                            </div>
+
                                         </section>
                                         <!-- /.content -->
                                     </div>

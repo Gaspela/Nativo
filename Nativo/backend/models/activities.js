@@ -5,12 +5,13 @@ var Schema = mongoose.Schema;
 
 var ActivitiesSchema = Schema({
     title: String,
-    totalOfQuestions: String,
-    name: String,
     description: String,
-    category: String,
-    year: Number,
-    type: String,
+    company: String,
+    date: String,
+    rescorrect: String,
+    resincorrect1: String,
+    resincorrect2: String,
+    resincorrect3: String,
     image: String
 });
 

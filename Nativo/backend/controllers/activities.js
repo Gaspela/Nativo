@@ -10,11 +10,14 @@ var controller = {
 
         var params = req.body;
 
-        activities.name = params.name;
+        activities.title = params.title;
         activities.description = params.description;
-        activities.category = params.category;
-        activities.year = params.year;
-        activities.type = params.type;
+        activities.company = params.company;
+        activities.date = params.date;
+        activities.rescorrect = params.rescorrect;
+        activities.resincorrect1 = params.resincorrect1;
+        activities.resincorrect2 = params.resincorrect2;
+        activities.resincorrect3 = params.resincorrect3;
         activities.image = null;
 
 

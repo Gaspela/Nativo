@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -15,6 +17,8 @@ import { DailyactivitiesComponent } from './pages/dailyactivities/dailyactivitie
 import { WeeklyactivitiesComponent } from './pages/weeklyactivities/weeklyactivities.component';
 import { ResultsComponent } from './pages/results/results.component';
 import { CreateactComponent } from './pages/createact/createact.component'
+
+
 
 @NgModule({
   declarations: [
@@ -34,7 +38,10 @@ import { CreateactComponent } from './pages/createact/createact.component'
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule
+  
   ],
   providers: [],
   bootstrap: [AppComponent]
