@@ -19,8 +19,6 @@ export class ActivitiesService {
     saveActivities(activities: Activities): Observable<any> {
         let params = JSON.stringify(activities);
         let headers = new HttpHeaders().set('Content-type', 'application/json');
-
         return this._hhtp.post(this.url + 'addactivities', params, { headers: headers });
-
     }
 }

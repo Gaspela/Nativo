@@ -1,123 +1,216 @@
-<!-- Content Header (Page header) -->
-<div class="content-header">
+<div class="idebar-mini sidebar-closed sidebar-collapse">
+  <!-- Content Header (Page header) -->
+  <div class="content-header">
     <div class="container-fluid">
-        <div class="row mb-2">
-            <div class="col-sm-6">
-                <h1 class="m-0 text-dark">Demo</h1>
-            </div><!-- /.col -->
-            <div class="col-sm-6">
-                <ol class="breadcrumb float-sm-right">
-                    <li class="breadcrumb-item"><a href="../../index.html">Home</a></li>
-                </ol>
-            </div><!-- /.col -->
-        </div><!-- /.row -->
-    </div><!-- /.container-fluid -->
-</div>
-<!-- /.content-header -->
-
-<!-- Main content -->
-<div class="content">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-12">
-                <h4></h4>
-            </div>
+      <div class="row mb-2">
+        <div class="col-sm-6">
+          <h1 class="m-0 text-dark">Demo</h1>
         </div>
-        <!-- ./row -->
-        <div class="row">
-            <div class="col-12 col-sm-12">
-                <div class="card card-primary card-tabs">
-                    <div class="card-header p-0 pt-1">
-                        <ul class="nav nav-tabs" id="custom-tabs-one-tab" role="tablist">
-                            <li class="nav-item">
-                                <a class="nav-link active" id="custom-tabs-one-home-tab" data-toggle="pill"
-                                    href="#custom-tabs-one-home" role="tab" aria-controls="custom-tabs-one-home"
-                                    aria-selected="true">{{title}}</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="card-body">
-                        <div class="tab-content" id="custom-tabs-one-tabContent">
-                            <div class="row">
-                                <div class="col-md-0">
+        <!-- /.col -->
+        <div class="col-sm-6">
+          <ol class="breadcrumb float-sm-right">
+            <li class="breadcrumb-item"><a href="../../index.html">Home</a></li>
+          </ol>
+        </div>
+        <!-- /.col -->
+      </div>
+      <!-- /.row -->
+    </div>
+    <!-- /.container-fluid -->
+  </div>
+  <!-- /.content-header -->
+
+  <!-- Main content -->
+  <div class="content">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12">
+          <h4></h4>
+        </div>
+      </div>
+      <!-- ./row -->
+      <div class="row">
+        <div class="col-12 col-sm-12">
+          <div class="card card-primary card-tabs">
+            <div class="card-header p-0 pt-1">
+              <ul class="nav nav-tabs" id="custom-tabs-one-tab" role="tablist">
+                <li class="nav-item">
+                  <a
+                    class="nav-link active"
+                    id="custom-tabs-one-home-tab"
+                    data-toggle="pill"
+                    href="#custom-tabs-one-home"
+                    role="tab"
+                    aria-controls="custom-tabs-one-home"
+                    aria-selected="true"
+                    >Creation activities</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div class="card-body">
+              <div class="tab-content" id="custom-tabs-one-tabContent">
+                <div class="row">
+                  <div class="col-md-0"></div>
+                  <div class="col-md-10">
+                    <div class="content-wrapper" style="min-height: 1416.81px;">
+                      <!-- Main content -->
+                      <section class="content">
+                        <div class="row">
+                          <div class="col-md-12">
+                            <div class="card card-secondary">
+                              <!-- Form activities -->
+                              <div class="card-body">
+                                <div
+                                  *ngIf="status == 'failed'"
+                                  class="alert alert-danger"
+                                >
+                                  <strong>Failed!</strong> The new activity
+                                  cannot be created.
                                 </div>
-                                <div class="col-md-10">
-                                    <div class="content-wrapper" style="min-height: 1416.81px;">
+                                <div
+                                  *ngIf="status == 'success'"
+                                  class="alert alert-success"
+                                >
+                                  <strong>Success!</strong> the activity has
+                                  been created correctly.
+                                </div>
 
-                                        <!-- Main content -->
-                                        <section class="content">
+                                <form
+                                  #activitiesForm="ngForm"
+                                  (ngSubmit)="onSubmit(activitiesForm)"
+                                >
+                                  <div class="card-header">
+                                    <label for="inputTitle"
+                                      >Title activity</label
+                                    >
+                                    <input
+                                      type="text"
+                                      id="inputTitle"
+                                      name="title"
+                                      #title="ngModel"
+                                      [(ngModel)]="activities.title"
+                                      class="form-control"
+                                      required
+                                    />
+                                    <span
+                                      style="color: red;"
+                                      *ngIf="title.touched && !title.valid"
+                                    >
+                                      The title is mandatory.
+                                    </span>
+                                  </div>
+                                  <div class="form-group">
+                                    <label for="inputDescription"
+                                      >Activity Description</label
+                                    >
+                                    <textarea
+                                      id="inputDescription"
+                                      name="description"
+                                      #description="ngModel"
+                                      [(ngModel)]="activities.description"
+                                      class="form-control"
+                                      rows="12"
+                                      required
+                                    ></textarea>
+                                    <span
+                                      style="color: red;"
+                                      *ngIf="
+                                        description.touched &&
+                                        !description.valid
+                                      "
+                                    >
+                                      The description is mandatory.
+                                    </span>
+                                  </div>
+                                  <!-- Button img -->
+                                 
+                                  <form>
+                                    <div class="form-group">
+                                      <label for="exampleFormControlFile1"
+                                        >Upload image</label
+                                      >
+                                      <input
+                                        type="file"
+                                        class="form-control-file"
+                                        id="exampleFormControlFile1"
+                                        (change)="fileChangeEvent($event)"
+                                      />
+                                    </div>
+                                  </form>
 
-                                            <div class="row">
-                                                <div class="col-md-12">
-                                                    <div class="card card-secondary">
-                                                        <!-- Form activities -->
-
-                                                        <div class="card-body">
-                                                            <form #activitiesForm="ngForm"
-                                                                (ngSubmit)="onSubmit(activitiesForm)">
-                                                                <div class="form-group">
-                                                                    <label for="inputTitle">Title activity</label>
-                                                                    <input type="text" id="inputTitle" name="title"
-                                                                        #title="ngModel" [(ngModel)]="activities.title"
-                                                                        class="form-control" required>
-                                                                    <span style="color: red;"
-                                                                        *ngIf="title.touched && !title.valid">
-                                                                        The title is mandatory.
-                                                                    </span>
-                                                                </div>
-                                                                <div class="form-group">
-                                                                    <label for="inputDescription">Activity
-                                                                        Description</label>
-                                                                    <textarea id="inputDescription" name="description"
-                                                                        #description="ngModel"
-                                                                        [(ngModel)]="activities.description"
-                                                                        class="form-control" rows="12"
-                                                                        required></textarea>
-                                                                    <span style="color: red;"
-                                                                        *ngIf="description.touched && !description.valid">
-                                                                        The description is mandatory.
-                                                                    </span>
-                                                                </div>
-                                                                <div class="form-group">
-                                                                    <label for="inputName">Correct answer</label>
-                                                                    <input type="text" id="inputRescorrect"
-                                                                        name="rescorrect" #rescorrect="ngModel"
-                                                                        [(ngModel)]="activities.rescorrect"
-                                                                        class="form-control is-valid" required>
-                                                                    <span style="color: red;"
-                                                                        *ngIf="rescorrect.touched && !rescorrect.valid">
-                                                                        A correct answer is necessary.
-                                                                    </span>
-                                                                </div>
-                                                                <div class="form-group">
-                                                                    <label for="inputName">
-                                                                        Incorrect answer</label>
-                                                                    <input type="text" id="inputResincorrect1"
-                                                                        name="resincorrect1" #resincorrect1="ngModel"
-                                                                        [(ngModel)]="activities.resincorrect1"
-                                                                        class="form-control is-invalid" required>
-                                                                    <span style="color: red;"
-                                                                        *ngIf="resincorrect1.touched && !resincorrect1.valid">
-                                                                        An incorrect answer is required.
-                                                                    </span>
-                                                                </div>
-                                                                <div class="form-group">
-                                                                    <label for="inputName">
-                                                                        Incorrect answer</label>
-                                                                    <input type="text" id="inputResincorrect2"
-                                                                        name="resincorrect2" #name="ngModel"
-                                                                        [(ngModel)]="activities.resincorrect2"
-                                                                        class="form-control is-invalid">
-                                                                </div>
-                                                                <div class="form-group">
-                                                                    <label for="inputName">
-                                                                        Incorrect answer</label>
-                                                                    <input type="text" id="inputResincorrect3"
-                                                                        name="resincorrect3" #name="ngModel"
-                                                                        [(ngModel)]="activities.resincorrect3"
-                                                                        class="form-control is-invalid">
-                                                                </div>
-                                                                <!--                                                                 <div class="form-group">
+                                  <div class="form-group">
+                                    <label for="inputName"
+                                      >Correct answer</label
+                                    >
+                                    <input
+                                      type="text"
+                                      id="inputRescorrect"
+                                      name="rescorrect"
+                                      #rescorrect="ngModel"
+                                      [(ngModel)]="activities.rescorrect"
+                                      class="form-control is-valid"
+                                      required
+                                    />
+                                    <span
+                                      style="color: red;"
+                                      *ngIf="
+                                        rescorrect.touched && !rescorrect.valid
+                                      "
+                                    >
+                                      A correct answer is necessary.
+                                    </span>
+                                  </div>
+                                  <div class="form-group">
+                                    <label for="inputName">
+                                      Incorrect answer</label
+                                    >
+                                    <input
+                                      type="text"
+                                      id="inputResincorrect1"
+                                      name="resincorrect1"
+                                      #resincorrect1="ngModel"
+                                      [(ngModel)]="activities.resincorrect1"
+                                      class="form-control is-invalid"
+                                      required
+                                    />
+                                    <span
+                                      style="color: red;"
+                                      *ngIf="
+                                        resincorrect1.touched &&
+                                        !resincorrect1.valid
+                                      "
+                                    >
+                                      An incorrect answer is required.
+                                    </span>
+                                  </div>
+                                  <div class="form-group">
+                                    <label for="inputName">
+                                      Incorrect answer</label
+                                    >
+                                    <input
+                                      type="text"
+                                      id="inputResincorrect2"
+                                      name="resincorrect2"
+                                      #name="ngModel"
+                                      [(ngModel)]="activities.resincorrect2"
+                                      class="form-control is-invalid"
+                                    />
+                                  </div>
+                                  <div class="form-group">
+                                    <label for="inputName">
+                                      Incorrect answer</label
+                                    >
+                                    <input
+                                      type="text"
+                                      id="inputResincorrect3"
+                                      name="resincorrect3"
+                                      #name="ngModel"
+                                      [(ngModel)]="activities.resincorrect3"
+                                      class="form-control is-invalid"
+                                    />
+                                  </div>
+                                  <!--                                                                 <div class="form-group">
                                                                     <label for="inputStatus">Status</label>
                                                                     <select class="form-control custom-select">
                                                                         <option selected="" disabled="">Select one
@@ -127,52 +220,69 @@
                                                                         <option>Success</option>
                                                                     </select>
                                                                 </div> -->
-                                                                <div class="form-group">
-                                                                    <label for="inputName">Company</label>
-                                                                    <input type="text" id="inputCompany" name="company"
-                                                                        #name="ngModel" [(ngModel)]="activities.company"
-                                                                        class="form-control">
-                                                                </div>
-                                                                <div class="custom-file">
-                                                                    <input type="file" name="image"
-                                                                        class="custom-file-input" id="customFile">
-                                                                    <label class="custom-file-label"
-                                                                        for="customFile">Choose
-                                                                        file</label>
-                                                                </div>
-                                                                <br>
-                                                                <br>
-                                                                <div class="row">
-                                                                    <div class="col-12">
-                                                                        <a href="#" class="btn btn-secondary">Cancel</a>
+                                  <div class="form-group">
+                                    <label for="inputName">Company</label>
+                                    <input
+                                      type="text"
+                                      id="inputCompany"
+                                      name="company"
+                                      #name="ngModel"
+                                      [(ngModel)]="activities.company"
+                                      class="form-control"
+                                    />
+                                  </div>
+                                  <!--     <div class="custom-file">
+                                    <input
+                                      type="file"
+                                      name="image"
+                                      class="custom-file-input"
+                                      id="customFile"
+                                      (change)="fileChangeEvent($event)"
+                                    />
+                                    <label
+                                      class="custom-file-label"
+                                      for="customFile"
+                                      ></label
+                                    >
+                                  </div> -->
 
-                                                                        <input type="submit" value="Create new Porject"
-                                                                            class="btn btn-success float-right" [disabled]="!activitiesForm.form.valid">
-                                                                    </div>
-                                                                </div>
-                                                            </form>
-                                                        </div>
-                                                        <!-- /.card-body -->
-                                                        <!-- /Form activities -->
-                                                    </div>
-                                                    <!-- /.card -->
-                                                </div>
-                                            </div>
-
-
-                                        </section>
-                                        <!-- /.content -->
+                                  <br />
+                                  <br />
+                                  <div class="row">
+                                    <div class="col-12">
+                                      <a href="#" class="btn btn-secondary"
+                                        >Cancel</a
+                                      >
+                                      <input
+                                        type="submit"
+                                        value="Create new Porject"
+                                        class="btn btn-success float-right"
+                                        [disabled]="!activitiesForm.form.valid"
+                                      />
                                     </div>
-                                </div>
-                                <div class="col-md-3">
-                                </div>
+                                  </div>
+                                </form>
+                              </div>
+                              <!-- /.card-body -->
+                              <!-- /Form activities -->
                             </div>
+                            <!-- /.card -->
+                          </div>
                         </div>
+                      </section>
+                      <!-- /.content -->
                     </div>
-                    <!-- /.card -->
+                  </div>
+                  <div class="col-md-3"></div>
                 </div>
+              </div>
             </div>
+            <!-- /.card -->
+          </div>
         </div>
-    </div><!-- /.container-fluid -->
+      </div>
+    </div>
+    <!-- /.container-fluid -->
+  </div>
+  <!-- /.content -->
 </div>
-<!-- /.content -->
