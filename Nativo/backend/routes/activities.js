@@ -14,5 +14,6 @@ router.get('/listactivities', ActivitiesController.getListActivities);
 router.put('/activities/:id', ActivitiesController.updateActivities);
 router.delete('/activities/:id', ActivitiesController.deleteActivities);
 router.post('/uploadimgact/:id', multipartMiddleware, ActivitiesController.uploadImage);
+router.get('/getimgact/:image', ActivitiesController.getImageFile);
 
 module.exports = router;

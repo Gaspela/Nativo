@@ -2,6 +2,8 @@
 //Funtions or methods
 var model_activities = require('../models/activities');
 var filesis = require('fs');
+var path = require('path');
+
 var controller = {
 
     //Create new activities
@@ -87,7 +89,22 @@ var controller = {
                 });
             }
         }
+    },
+
+    getImageFile: function(req, res){
+        var file = req.params.image;
+        var path_file = './uploadsact/'+file;
+
+        filesis.exists(path_file, (exists)=>{
+            if (exists){
+                return res.sendFile(path.resolve(path_file));
+            }else{
+                return res.status(200).send({message: "There is no image for the activity"})
+            }
+        });
+        
     }
+
 };
 
 //Retunr model exports
