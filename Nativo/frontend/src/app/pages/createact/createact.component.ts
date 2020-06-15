@@ -28,7 +28,7 @@ export class CreateactComponent implements OnInit {
     var f = new Date();
     var date = f.toString();
     var date = f.getDate() + '/' + (f.getMonth() + 1) + '/' + f.getFullYear();
-    this.activities = new Activities('', '', '', date, '', '', '', '', '', '');
+    this.activities = new Activities('', '', '', date, '','', '',' ', '', '', '', '');
   }
 
   ngOnInit() {}

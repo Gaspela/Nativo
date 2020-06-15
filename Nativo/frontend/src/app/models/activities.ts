@@ -4,6 +4,8 @@ export class Activities {
         public title: string,
         public description: string,
         public date: string,
+        public numActivities: string,
+        public tutor: string,
         public company: string,
         public image: string,
         public rescorrect: string,

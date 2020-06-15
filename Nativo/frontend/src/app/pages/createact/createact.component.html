@@ -9,7 +9,9 @@
         <!-- /.col -->
         <div class="col-sm-6">
           <ol class="breadcrumb float-sm-right">
-            <li class="breadcrumb-item"><a href="../../index.html">Home</a></li>
+            <li class="breadcrumb-item">
+              <a href="../../index.html">Home</a> /demo
+            </li>
           </ol>
         </div>
         <!-- /.col -->
@@ -43,7 +45,7 @@
                     role="tab"
                     aria-controls="custom-tabs-one-home"
                     aria-selected="true"
-                    >Creation activities</a
+                    >Creation program</a
                   >
                 </li>
               </ul>
@@ -82,7 +84,7 @@
                                 >
                                   <div class="card-header">
                                     <label for="inputTitle"
-                                      >Title activity</label
+                                      >Name training Program</label
                                     >
                                     <input
                                       type="text"
@@ -102,8 +104,9 @@
                                   </div>
                                   <div class="form-group">
                                     <label for="inputDescription"
-                                      >Activity Description</label
+                                      >Program description</label
                                     >
+                                    
                                     <textarea
                                       id="inputDescription"
                                       name="description"
@@ -113,6 +116,7 @@
                                       rows="12"
                                       required
                                     ></textarea>
+
                                     <span
                                       style="color: red;"
                                       *ngIf="
@@ -123,12 +127,13 @@
                                       The description is mandatory.
                                     </span>
                                   </div>
-                                  <!-- Button img -->
-                                 
+
+                                  <app-results></app-results>
+
                                   <form>
                                     <div class="form-group">
                                       <label for="exampleFormControlFile1"
-                                        >Upload image</label
+                                        >Add program image</label
                                       >
                                       <input
                                         type="file"
@@ -141,85 +146,46 @@
 
                                   <div class="form-group">
                                     <label for="inputName"
-                                      >Correct answer</label
+                                      >Number activities</label
                                     >
                                     <input
                                       type="text"
-                                      id="inputRescorrect"
-                                      name="rescorrect"
-                                      #rescorrect="ngModel"
-                                      [(ngModel)]="activities.rescorrect"
-                                      class="form-control is-valid"
+                                      id="inputnumActivities"
+                                      name="numActivities"
+                                      #numActivities="ngModel"
+                                      [(ngModel)]="activities.numActivities"
+                                      class="form-control"
                                       required
                                     />
                                     <span
                                       style="color: red;"
                                       *ngIf="
-                                        rescorrect.touched && !rescorrect.valid
+                                        numActivities.touched &&
+                                        !numActivities.valid
                                       "
                                     >
-                                      A correct answer is necessary.
+                                      Is necessary number activities.
                                     </span>
                                   </div>
+
                                   <div class="form-group">
-                                    <label for="inputName">
-                                      Incorrect answer</label
-                                    >
+                                    <label for="inputName"> Tutor</label>
                                     <input
                                       type="text"
-                                      id="inputResincorrect1"
-                                      name="resincorrect1"
-                                      #resincorrect1="ngModel"
-                                      [(ngModel)]="activities.resincorrect1"
-                                      class="form-control is-invalid"
+                                      id="inputtutor"
+                                      name="tutor"
+                                      #tutor="ngModel"
+                                      [(ngModel)]="activities.tutor"
+                                      class="form-control"
                                       required
                                     />
                                     <span
                                       style="color: red;"
-                                      *ngIf="
-                                        resincorrect1.touched &&
-                                        !resincorrect1.valid
-                                      "
+                                      *ngIf="tutor.touched && !tutor.valid"
                                     >
-                                      An incorrect answer is required.
+                                      Required name tutor.
                                     </span>
                                   </div>
-                                  <div class="form-group">
-                                    <label for="inputName">
-                                      Incorrect answer</label
-                                    >
-                                    <input
-                                      type="text"
-                                      id="inputResincorrect2"
-                                      name="resincorrect2"
-                                      #name="ngModel"
-                                      [(ngModel)]="activities.resincorrect2"
-                                      class="form-control is-invalid"
-                                    />
-                                  </div>
-                                  <div class="form-group">
-                                    <label for="inputName">
-                                      Incorrect answer</label
-                                    >
-                                    <input
-                                      type="text"
-                                      id="inputResincorrect3"
-                                      name="resincorrect3"
-                                      #name="ngModel"
-                                      [(ngModel)]="activities.resincorrect3"
-                                      class="form-control is-invalid"
-                                    />
-                                  </div>
-                                  <!--                                                                 <div class="form-group">
-                                                                    <label for="inputStatus">Status</label>
-                                                                    <select class="form-control custom-select">
-                                                                        <option selected="" disabled="">Select one
-                                                                        </option>
-                                                                        <option>On Hold</option>
-                                                                        <option>Canceled</option>
-                                                                        <option>Success</option>
-                                                                    </select>
-                                                                </div> -->
                                   <div class="form-group">
                                     <label for="inputName">Company</label>
                                     <input
@@ -231,21 +197,6 @@
                                       class="form-control"
                                     />
                                   </div>
-                                  <!--     <div class="custom-file">
-                                    <input
-                                      type="file"
-                                      name="image"
-                                      class="custom-file-input"
-                                      id="customFile"
-                                      (change)="fileChangeEvent($event)"
-                                    />
-                                    <label
-                                      class="custom-file-label"
-                                      for="customFile"
-                                      ></label
-                                    >
-                                  </div> -->
-
                                   <br />
                                   <br />
                                   <div class="row">
@@ -286,3 +237,4 @@
   </div>
   <!-- /.content -->
 </div>
+

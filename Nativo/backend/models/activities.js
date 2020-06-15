@@ -8,6 +8,8 @@ var ActivitiesSchema = Schema({
     description: String,
     company: String,
     date: String,
+    numActivities: String,
+    tutor: String,
     rescorrect: String,
     resincorrect1: String,
     resincorrect2: String,
