@@ -18,6 +18,7 @@ import { WeeklyactivitiesComponent } from './pages/weeklyactivities/weeklyactivi
 import { ResultsComponent } from './pages/results/results.component';
 import { CreateactComponent } from './pages/createact/createact.component'
 import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
+import { LandingComponent } from './pages/landing/landing.component';
 
 
 @NgModule({
@@ -34,7 +35,8 @@ import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
     DailyactivitiesComponent,
     WeeklyactivitiesComponent,
     ResultsComponent,
-    CreateactComponent
+    CreateactComponent,
+    LandingComponent
   ],
   imports: [
     BrowserModule,

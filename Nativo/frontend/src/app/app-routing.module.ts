@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, Component } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { MainComponent } from './main/main.component';
 import { LoginComponent } from './login/login.component';
@@ -9,32 +9,56 @@ import { DailyactivitiesComponent } from './pages/dailyactivities/dailyactivitie
 import { WeeklyactivitiesComponent } from './pages/weeklyactivities/weeklyactivities.component';
 import { ResultsComponent } from './pages/results/results.component';
 import { CreateactComponent } from './pages/createact/createact.component';
+import { LandingComponent } from './pages/landing/landing.component';
 
+const routes: Routes = [
+  {
+    path: 'landing',
+    component: LandingComponent,
+  },
+  {
+    path: '',
+    component: MainComponent,
 
-const routes: Routes = [{
-  path: '', component: MainComponent,
-  children: [{
-    path: '', component: HomeComponent
-  }, {
-    path: 'contact', component: ContactComponent
-  }, {
-    path: 'dailyactivities', component: DailyactivitiesComponent
-  }, {
-    path: 'weeklyactivities', component: WeeklyactivitiesComponent
-  }, {
-    path: 'results', component: ResultsComponent
-  }, {
-    path: 'createact', component: CreateactComponent
-  }, {
-    path: '**', component: PagenotfoundComponent
-  }]
-}, {
-  path: 'login', component: LoginComponent
-}
+    children: [
+      {
+        path: '',
+        component: HomeComponent,
+      },
+      {
+        path: 'contact',
+        component: ContactComponent,
+      },
+      {
+        path: 'dailyactivities',
+        component: DailyactivitiesComponent,
+      },
+      {
+        path: 'weeklyactivities',
+        component: WeeklyactivitiesComponent,
+      },
+      {
+        path: 'results',
+        component: ResultsComponent,
+      },
+      {
+        path: 'createact',
+        component: CreateactComponent,
+      },
+      {
+        path: '**',
+        component: PagenotfoundComponent,
+      },
+    ],
+  },
+  {
+    path: 'login',
+    component: LoginComponent,
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
