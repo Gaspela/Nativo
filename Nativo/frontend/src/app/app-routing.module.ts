@@ -10,6 +10,7 @@ import { WeeklyactivitiesComponent } from './pages/weeklyactivities/weeklyactivi
 import { ResultsComponent } from './pages/results/results.component';
 import { CreateactComponent } from './pages/createact/createact.component';
 import { LandingComponent } from './pages/landing/landing.component';
+import { ProfileComponent } from './pages/profile/profile.component';
 
 const routes: Routes = [
   {
@@ -44,6 +45,10 @@ const routes: Routes = [
       {
         path: 'createact',
         component: CreateactComponent,
+      },
+      {
+        path: 'profile',
+        component: ProfileComponent,
       },
       {
         path: '**',
