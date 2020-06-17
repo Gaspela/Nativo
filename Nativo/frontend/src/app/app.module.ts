@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
-import { FormsModule } from '@angular/forms'
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -16,11 +16,11 @@ import { PagenotfoundComponent } from './pages/pagenotfound/pagenotfound.compone
 import { DailyactivitiesComponent } from './pages/dailyactivities/dailyactivities.component';
 import { WeeklyactivitiesComponent } from './pages/weeklyactivities/weeklyactivities.component';
 import { ResultsComponent } from './pages/results/results.component';
-import { CreateactComponent } from './pages/createact/createact.component'
+import { CreateactComponent } from './pages/createact/createact.component';
 import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
 import { LandingComponent } from './pages/landing/landing.component';
 import { ProfileComponent } from './pages/profile/profile.component';
-
+import { ScrollSpyDirective } from './pages/landing/scroll-spy.directive';
 
 @NgModule({
   declarations: [
@@ -38,17 +38,17 @@ import { ProfileComponent } from './pages/profile/profile.component';
     ResultsComponent,
     CreateactComponent,
     LandingComponent,
-    ProfileComponent
+    ProfileComponent,
+    ScrollSpyDirective,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    SweetAlert2Module.forRoot()
-  
+    SweetAlert2Module.forRoot(),
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
