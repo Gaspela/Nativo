@@ -65,7 +65,7 @@ a + a {
   background-image: url("../src/assets/dist/img/Backgroundprofile.png");
 
   /* Control the height of the image */
-  min-height: 848px;
+  min-height: 480px;
 
   /* Center and scale the image nicely */
   background-position: center;
@@ -112,7 +112,7 @@ a + a {
 }
 
 .img1{
-  height: 350px;
+  height: 450px;
   width: 100%;
   overflow: hidden;
   
@@ -175,4 +175,29 @@ a + a {
   cursor: pointer;
 }
 
+.bg-img5 {
+  /* The image used */
+  background-image: url("../src/assets/dist/img/164924335-white-wallpapers.png");
 
+  /* Control the height of the image */
+  min-height: 920px;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.text-block1 {
+  position: absolute;
+  padding: 40px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* background-color: rgb(96,96,96); */
+  border-radius: 15px;
+  color: rgb(87, 80, 80);
+  border: 8px solid #f1f1f1;
+ 
+}
