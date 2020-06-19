@@ -180,7 +180,7 @@ a + a {
   background-image: url("../src/assets/dist/img/164924335-white-wallpapers.png");
 
   /* Control the height of the image */
-  min-height: 920px;
+  min-height: 1150px;
 
   /* Center and scale the image nicely */
   background-position: center;
@@ -197,8 +197,8 @@ a + a {
   transform: translate(-50%, -50%);
   /* background-color: rgb(96,96,96); */
   border-radius: 15px;
-  color: rgb(87, 80, 80);
-  border: 8px solid #f1f1f1;
+  color: rgb(6, 37, 37);
+  border: 8px solid #6697aa;
  
 }
 
