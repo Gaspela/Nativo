@@ -27,6 +27,11 @@
         Program
         <ng-container *ngIf="currentSection === 'section4'"></ng-container>
       </div>
+      <li class="nav-item pointer">
+        <div (click)="scrollTo('section6')" class="nav-link" href="#section6">
+          History
+          <ng-container *ngIf="currentSection === 'section6'"></ng-container>
+        </div>
     </li>
     <li class="nav-item pointer">
       <div (click)="scrollTo('section5')" class="nav-link" href="#section5">
@@ -63,7 +68,12 @@
           Native a web platform designed to create and train your entire company
           with different activities that you can create based on your needs.
         </p>
-        <a class="btn btn-outline-secondary" href="#">Coming soon</a>
+        <a
+          style="color: white;"
+          class="btn btn-outline-secondary"
+          href="https://github.com/Gaspela04/Nativo"
+          >Github-Nativo</a
+        >
       </div>
     </div>
   </div>
@@ -79,7 +89,6 @@
       </div>
     </div>
   </div>
-
   <!-- SECTION 3 -->
   <div id="section3">
     <br />
@@ -178,10 +187,50 @@
           src="https://www.youtube.com/embed/QBjjU4r4u_0"
         >
         </iframe>
-        
+        <br />
       </div>
     </div>
   </div>
+
+  <div id="section6">
+    <div
+      class="bg-img6 cover-container d-flex p-3 mx-auto flex-column text-center"
+      style="background-color: rgb(63, 95, 138);"
+    >
+      <div class="text-block3">
+        <h1 class="display-4 font-weight-normal" style="font-size: 50px;">
+          History
+        </h1>
+        <p style="font-size: 20px;">
+          The main idea of ​​the project is aimed at training the personnel of
+          each company that requires a space to train their personnel in the
+          different areas of their company. This project was born with the idea
+          of ​​having the necessary tools to achieve control over each user and
+          their progress during each training they receive. During the first
+          stage of the native project, an MVP was established, a minimum viable
+          product and in this case, as a team, we decided to present 3 main
+          functions, one of them is the creation of programs or activities and
+          this would be done from a demo user. that would have the ability to
+          create such training programs, in addition to that, we include the
+          possibility of adding an image to each created program and the
+          possibility of being able to see all the programs currently active
+          and, on the other hand, a function that allows solving or study each
+          of the programs carried out by the demo user and, finally, be able to
+          visualize the information of the users. For all this beautiful
+          process, we designate different hours of the day to be in constant
+          communication with all the team members and for them we use different
+          platforms such as zoom and discord that allowed us to communicate
+          directly with each of our project partners, the entire process It was
+          great we learned many topics that at that time went unnoticed but that
+          during the solution of the protecto we had to retake and reinforce. It
+          was an incredible experience everything seen during this last phase of
+          holberton. amazing!
+        </p>
+        <br />
+      </div>
+    </div>
+  </div>
+
   <!-- SECTION 5 -->
   <div id="section5">
     <div

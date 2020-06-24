@@ -214,3 +214,16 @@ a + a {
   border: 8px solid #f1f1f1;
  
 }
+.bg-img6 {
+  /* The image used */
+  background-image: url("../src/assets/dist/img/EQIAOVnXsAI9SKZ.jpg");
+
+  /* Control the height of the image */
+  min-height: 980px;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
