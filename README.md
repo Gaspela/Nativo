@@ -1,4 +1,4 @@
-![Image](Nativopage.png)
+![Image](images/Nativopage.png)
 # NATIVO
 Web plataform for training people in companies.
 
@@ -11,8 +11,8 @@ This is the final project of Foundations in [Holberton School Colombia](https://
   - Create program: This function allows us to create to create a new program thata includes the name of the program, a description and we can upload thigs like images and videos.
   - Active programs: This function allows us to view the total number of active or avaible programs on the plataform, here we can view the tutor, number of activities and their priority.
   - Daily activities: This function allows us to view the active daily tasksto be solved by the user. In this field each activity can be solved using the multiple selection option.
-  
-![Image](features.png)
+
+![Image](images/features.png)
 
 ## Tech
 This project was developed with these technologies based in a framework called meanstack:
@@ -62,14 +62,14 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
 
-![Image](Demo.png)
+![Image](images/Demo.png)
 
 ## Authors
 * **Samir Millan Orozco** - [GitHub](https://github.com/Gaspela04)
 * **Mauricio Drada Davila** - [GitHub](https://github.com/Mauricio-KND)
 * **Diego Felipe Quijano Zuñiga** - [GitHub](https://github.com/diego0096)
 
-![Image](Contact.png)
+![Image](images/Contact.png)
 
 ## License
 MIT License Copyright (c) [2020] [Samir Millan - Mauricio Drada - Diego Quijano]
