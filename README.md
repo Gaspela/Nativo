@@ -11,6 +11,7 @@ This is the final project of Foundations in [Holberton School Colombia](https://
   - Create program: This function allows us to create to create a new program thata includes the name of the program, a description and we can upload thigs like images and videos.
   - Active programs: This function allows us to view the total number of active or avaible programs on the plataform, here we can view the tutor, number of activities and their priority.
   - Daily activities: This function allows us to view the active daily tasksto be solved by the user. In this field each activity can be solved using the multiple selection option.
+![Image](features.png)
 
 ## Tech
 This project was developed with these technologies based in a framework called meanstack:
