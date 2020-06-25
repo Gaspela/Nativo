@@ -1,4 +1,4 @@
-![Image](Screen Shot 2020-06-25 at 5.21.32 PM.png)
+![Image](Nativopage.png)
 # NATIVO
 Web plataform for training people in companies.
 
