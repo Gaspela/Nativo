@@ -11,6 +11,7 @@ This is the final project of Foundations in [Holberton School Colombia](https://
   - Create program: This function allows us to create to create a new program thata includes the name of the program, a description and we can upload thigs like images and videos.
   - Active programs: This function allows us to view the total number of active or avaible programs on the plataform, here we can view the tutor, number of activities and their priority.
   - Daily activities: This function allows us to view the active daily tasksto be solved by the user. In this field each activity can be solved using the multiple selection option.
+  
 ![Image](features.png)
 
 ## Tech
@@ -21,9 +22,6 @@ This project was developed with these technologies based in a framework called m
 * [MongoDB] - Database
 * [HTML] - Frontend
 
-## Demo
-The project is in a temporary location [Link](http://161.35.98.240:8000).
-
 ## Installing and Running
 
 You can run this project on the local machine.
@@ -31,7 +29,7 @@ You can run this project on the local machine.
 ### Prerequisites
 You need to have and install:
 ```
-Ubuntu 18.04 LTS
+Ubuntu 16.04 LTS
 Angular 9
 Node JS 12.18.1 LTS
 MongoDB
@@ -70,6 +68,11 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 * **Samir Millan Orozco** - [GitHub](https://github.com/Gaspela04)
 * **Mauricio Drada Davila** - [GitHub](https://github.com/Mauricio-KND)
 * **Diego Felipe Quijano Zuñiga** - [GitHub](https://github.com/diego0096)
+
+![Image](Contact.png)
+
+## License
+MIT License Copyright (c) [2020] [Samir Millan - Mauricio Drada - Diego Quijano]
 
 ## Update
 June, 2020
